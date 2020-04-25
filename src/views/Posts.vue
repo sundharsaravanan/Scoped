@@ -1,10 +1,9 @@
 <template>
   <div class="home">
-    <Header/>
+    <Header :isSelected="true"/>
     <div class="container">
       <Title title="Post"/>
       <BlogCard :blogs="blogs"/>
-      <AboutMe/>
     </div>
     <Footer/>
   </div>
@@ -16,12 +15,11 @@ import Title from '../components/SectionTitle'
 import BlogCard from '../components/BlogCard';
 import Blogs from '../contents/blogs.js';
 import Footer from '../components/Footer';
-import AboutMe from '../components/AboutMe'
 
 export default {
   name: "Home",
   components: {
-    Header,Title,BlogCard,AboutMe,Footer,
+    Header,Title,BlogCard,Footer,
   },
   data(){
     return {
